@@ -25,7 +25,7 @@ func handleTicker(w http.ResponseWriter, r *http.Request) {
 	defer conn.Close()
 
 	prices := map[string]float64{"BTC": 67000, "ETH": 3500, "SOL": 150}
-	t := time.NewTicker(10 * time.Millisecond)
+	t := time.NewTicker(100 * time.Millisecond)
 	defer t.Stop()
 
 	for range t.C {
