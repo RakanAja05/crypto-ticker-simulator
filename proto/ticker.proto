@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package ticker;
+option go_package = "github.com/RakanAja05/crypto-ticker-simulator/gen/tickerpb";
+
+message Tick {
+  string symbol     = 1;
+  double price      = 2;
+  double change_pct = 3;
+  int64  timestamp  = 4;
+}
